@@ -4,7 +4,10 @@
 	"description": "",
 	"main": "a.js",
 	"scripts": {
-		"start": "nodemon ./dist/server.js",
+		"build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node ./dist/server.js",
 		"format": "npx prettier --write ."
 	},
 	"author": "",
